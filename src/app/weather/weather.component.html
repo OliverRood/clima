@@ -1,0 +1,47 @@
+<div *ngIf="!loaded">
+    <p class="carga">Obteniendo informacion...</p>
+</div>
+
+<div class="container" *ngIf="loaded">
+    <div class="row" *ngFor="let clima of weatherInfo; index as i">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="row m-1 mt-2" *ngIf="i==0">
+                <div class="col-sm-12 col-md-12 col-lg-12 mt-1 align-self-center">
+                    <div class="sqWeatherP col-lg-12 rounded-lg m-1 p-1">
+                        <div>
+                            <img src={{getImg(clima.weather)}} class="mx-auto d-block imgP">
+                        </div>
+                        <div>
+                            <p class="clima">{{clima.weather}}</p>
+                        </div>
+                        <div class="temperaturaP mt-2">
+                            <p><span>Maxima</span>{{clima.temp2m.max}}°</p>
+                            <p><span>Minima</span>{{clima.temp2m.min}}°</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-1 mt-2 justify-content-center" *ngIf="i!=0">
+                <div class="col-sm-12 col-md-12 col-lg-5 mt-2">
+                    <div class="sqWeather col-lg-12 rounded-lg m-1 mt-1 p-2">
+                        <div>
+                            <p class="fecha">{{dateOrder(clima.date) | date: 'fullDate'}}</p>
+                        </div>
+                        <div>
+                            <img src={{getImg(clima.weather)}} class="mx-auto d-block imgS">
+                        </div>
+                        <div>
+                            <p class="clima">{{clima.weather}}</p>
+                        </div>
+                        <div class="temperatura">
+                            <span>Maxima</span>
+                            <p>{{clima.temp2m.max}}°</p>
+                            <span>Minima</span>
+                            <p>{{clima.temp2m.min}}°</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

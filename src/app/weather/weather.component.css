@@ -1,0 +1,85 @@
+.carga{
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px #8585855e;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.sqWeather{
+    background-color: rgb(250, 250, 250);
+    box-shadow: 5px 5px 5px rgba(192, 192, 192, 0.493);
+    border: 1px solid rgba(226, 226, 226, 0.322);
+}
+
+.sqWeatherP span{
+    font-weight: 600;
+    color: white;
+}
+
+.sqWeatherP p{
+    font-weight: 200;
+    color: white;
+}
+
+.sqWeather:hover{
+    transform: scale(1.027, 1.027);
+    transition-duration: 600ms;
+    transition-timing-function: ease-out;
+}
+
+.temperatura{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(59, 59, 59);
+}
+
+.temperaturaP{
+    text-align: center;
+}
+
+.temperaturaP span{
+    margin-right: 20px;
+    font-size: 1.1em;
+    text-shadow: 1px 1px #8585855e;
+}
+.temperaturaP p{
+    font-size: 1.3em;
+    text-shadow: 1px 1px #8585855e;
+}
+
+span{
+    font-weight: 600;
+}
+
+p{
+    font-weight: 200;
+}
+
+.fecha{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.clima{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 200;
+    font-size: 0.7rem;
+    color: rgb(83, 83, 83);
+}
+
+.imgP{
+    max-height: 250px;
+}
+
+.imgS{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    max-height: 150px;
+}
